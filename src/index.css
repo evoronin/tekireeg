@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.edit-icon {
+  background: url('./img/edit.svg') right center no-repeat;
+}
+
+.delete-icon {
+  background: url('./img/delete.svg') right center no-repeat;
+}
+
+.right-arrow-icon {
+  background: url('./img/arrow-right.svg') right center no-repeat;
+}
+
+.email-icon {
+  background: url('./img/email.svg') left center no-repeat;
+}
+
+.comment-icon {
+  background: url('./img/comment.svg') left center no-repeat;
+}

@@ -1,0 +1,14 @@
+
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card" transform="translate(-229.000000, -16.000000)">
+            <g id="Components/Buttons/Edit" transform="translate(221.000000, 8.000000)">
+                <rect id="hit-area" x="0" y="0" width="30" height="30" rx="2.72727273"></rect>
+                <path d="M21.6870596,10.1379583 L19.8623516,8.31245675 C19.4446631,7.89381189 18.7671768,7.89687408 18.3494884,8.31551894 L8.90054501,17.7663063 L8,22 L12.2354919,21.1027789 L21.6844353,11.6519916 C22.1038733,11.2333467 22.1056227,10.5566032 21.6870596,10.1379583 Z M11.9485772,20.2978609 L9.02344601,20.9754794 L9.70618072,18.0537145 L10.0613252,17.6985007 L11.1818674,18.8192615 L12.3024096,19.9400223 L11.9485772,20.2978609 Z" id="edit-icon" fill="#4A4A4A" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

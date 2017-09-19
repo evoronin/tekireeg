@@ -1,0 +1,59 @@
+.Card {
+  font-size: 12px;
+  position: relative;
+  float: right;
+  width: 261px;
+  margin: 20px 0 0 20px;
+  padding: 14px;
+  text-align: left;
+  background-color: rgba(226, 232, 236, 0.8);
+  border-radius: 4px;
+}
+
+.Card-headers {
+  float: left;
+}
+
+.Card-header {
+  margin: 0;
+  color: #ea3b3b;
+  font-size: 14px;
+}
+
+.Card-subheader {
+  margin: 0;
+  color: #4a4a4a;
+  opacity: 0.3;
+}
+
+.Card-info {
+  margin: 50px 0 0;
+  padding: 0;
+  list-style-type: none;
+  color: #4a4a4a;
+}
+
+.Card-info-item {
+  margin-bottom: 6px;
+  padding-left: 30px;
+}
+
+.Card-actions {
+  float: right;
+}
+
+.Card-edit,
+.Card-delete {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.Card-go-details {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
