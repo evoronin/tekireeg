@@ -15,21 +15,29 @@ class Card extends Component {
     }).isRequired,
   }
 
-  static onEditClick(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    global.console.log('Edit card icon was clicked');
+  constructor(props) {
+    super(props);
+
+    this.onEditClick = this.onEditClick.bind(this);
+    this.onDeleteClick = this.onDeleteClick.bind(this);
+    this.onCardClick = this.onCardClick.bind(this);
   }
 
-  static onDeleteClick(e) {
+  onEditClick(e) {
     e.preventDefault();
     e.stopPropagation();
-    global.console.log('Delete card icon was clicked');
+    global.console.log(`Edit card icon was clicked: ${this.props.details.header}`);
   }
 
-  static onCardClick(e) {
+  onDeleteClick(e) {
     e.preventDefault();
-    global.console.log('Clickable card, on card click');
+    e.stopPropagation();
+    global.console.log(`Delete card icon was clicked: ${this.props.details.header}`);
+  }
+
+  onCardClick(e) {
+    e.preventDefault();
+    global.console.log(`Clickable card, on card click: ${this.props.details.header}`);
   }
 
   render() {
