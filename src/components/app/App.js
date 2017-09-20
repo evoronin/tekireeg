@@ -8,36 +8,39 @@ import './App.css';
 class App extends Component {
   data = [
     {
+      id: 1,
       header: 'John Galt',
       subheader: 'Father',
       info: [
-        { icon: 'email-icon', text: 'galt@test.com' },
-        { icon: 'comment-icon', text: '+79280000111' }
+        { id: 1, icon: 'email-icon', text: 'galt@test.com' },
+        { id: 2, icon: 'comment-icon', text: '+79280000111' },
       ],
       isEditable: false,
-      isClickable: false
+      isClickable: false,
     },
     {
+      id: 2,
       header: 'John Doe',
       subheader: 'Uncle',
       info: [
-        { icon: 'email-icon', text: 'doe@test.com' },
-        { icon: 'comment-icon', text: '+79230000111' },
-        { icon: '', text: 'additional info' }
+        { id: 1, icon: 'email-icon', text: 'doe@test.com' },
+        { id: 2, icon: 'comment-icon', text: '+79230000111' },
+        { id: 3, icon: '', text: 'additional info' },
       ],
       isEditable: true,
-      isClickable: false
+      isClickable: false,
     },
     {
+      id: 3,
       header: 'Jane Doe',
       subheader: 'Mother',
       info: [
-        { icon: 'email-icon', text: 'jane@test.com' },
-        { icon: 'comment-icon', text: '+79260000111' }
+        { id: 1, icon: 'email-icon', text: 'jane@test.com' },
+        { id: 2, icon: 'comment-icon', text: '+79260000111' },
       ],
       isEditable: false,
-      isClickable: true
-    }
+      isClickable: true,
+    },
   ];
 
   render() {
@@ -48,9 +51,7 @@ class App extends Component {
           <h2>Kinedu React Exercise</h2>
         </div>
         <div className="App-cards">
-          {this.data.map((item, i) => {
-            return <Card key={i} details={item} />;
-          })}
+          {this.data.map(item => <Card key={item.id} details={item} />)}
         </div>
       </div>
     );

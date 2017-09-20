@@ -4,26 +4,37 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 class Card extends Component {
-  onEditClick(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('Edit card icon was clicked');
+  static propTypes = {
+    details: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      header: PropTypes.string.isRequired,
+      subheader: PropTypes.string.isRequired,
+      info: PropTypes.arrayOf(React.PropTypes.object).isRequired,
+      isEditable: PropTypes.bool,
+      isClickable: PropTypes.bool,
+    }).isRequired,
   }
 
-  onDeleteClick(e) {
+  static onEditClick(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log('Delete card icon was clicked');
+    global.console.log('Edit card icon was clicked');
   }
 
-  onCardClick(e) {
+  static onDeleteClick(e) {
     e.preventDefault();
-    console.log('Clickable card, on card click');
+    e.stopPropagation();
+    global.console.log('Delete card icon was clicked');
+  }
+
+  static onCardClick(e) {
+    e.preventDefault();
+    global.console.log('Clickable card, on card click');
   }
 
   render() {
     return (
-      <div className="Card" onClick={this.props.details.isClickable ? this.onCardClick : () => {}}>
+      <div className="Card" role="presentation" onClick={this.props.details.isClickable ? this.onCardClick : () => {}}>
         <div className="Card-headers">
           <p className="Card-header">
             {this.props.details.header}
@@ -34,26 +45,20 @@ class Card extends Component {
         </div>
         {this.props.details.isEditable &&
           <div className="Card-actions">
-            <a className="Card-edit edit-icon" onClick={this.onEditClick} />
-            <a className="Card-delete delete-icon" onClick={this.onDeleteClick} />
+            <span role="presentation" className="Card-edit edit-icon" onClick={this.onEditClick} />
+            <span role="presentation" className="Card-delete delete-icon" onClick={this.onDeleteClick} />
           </div>}
         <ul className="Card-info">
-          {this.props.details.info.map((item, i) => {
-            return (
-              <li className={'Card-info-item ' + item.icon} key={i}>
-                {item.text}
-              </li>
-            );
-          })}
+          {this.props.details.info.map(item => (
+            <li className={`Card-info-item ${item.icon}`} key={item.id}>
+              {item.text}
+            </li>
+          ))}
         </ul>
         {this.props.details.isClickable && <div className="Card-go-details right-arrow-icon" />}
       </div>
     );
   }
 }
-
-Card.PropTypes = {
-  details: PropTypes.object.isRequired
-};
 
 export default Card;
